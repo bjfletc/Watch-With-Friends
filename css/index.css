@@ -1,0 +1,51 @@
+body {
+    background-color: #282C34
+}
+
+#videoTitle {
+    position: fixed;
+    color: #D18F5B;
+    left: 15%;
+    top: 3%;
+    font-size: 50px;
+}
+
+#timer {
+    position: fixed;
+    color: #5FA6D7;
+
+    left: 75%;
+    top: 3%;
+    font-size: 21px;
+}
+
+#test01 {
+    position: fixed;
+    top: 25%;
+    left: 5%;
+
+    width: 65%;
+    height: 55%;
+}
+
+#text03 {
+    position: fixed;
+    color: #5FA6D7;
+
+    top: 45%;
+    left: 80%;
+}
+
+#pauseButton {
+    position: fixed;
+
+    top: 85%;
+    left: 35%;
+}
+
+#playButton {
+    position: fixed;
+
+    top: 85%;
+    left: 45%;
+}

@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+    <head>
+
+    </head>
+
+        <!-- Start of Home Page-->
+    <body>
+
+        <h1 id="status_of_video"> No Status... </h1>
+
+        <h1 id="videoTitle"> Futurama: S02E01 </h1>
+        <div id="test00">
+            <video id="Futurama_Video"  controls>
+                <source src="videos/S02E01.mp4" type="video/mp4">
+            </video>
+            <script>
+                // var vid = document.getElementById("test01");
+            </script>
+        </div>
+
+        <!-- Add Pause/Play Buttons -->
+        <button type="button" id="pauseButton">PAUSE</button>
+
+        <button type="button" id="playButton">PLAY</button>
+
+
+        <!-- Time to Script :-) -->
+        <script src="js/main.js"></script>
+
+        <script>
+
+            var futurama_Video = document.getElementById("Futurama_Video");
+            function loadDoc() {
+               var xhttp = new XMLHttpRequest();
+               xhttp.onreadystatechange = function() {
+                 if (this.readyState == 4 && this.status == 200) {
+                    var status = this.responseText;
+                    if (status.indexOf("false") !== -1) {
+                        document.getElementById("status_of_video").innerHTML = "File Says Playing...";
+                        futurama_Video.play();
+                    } else {
+                        document.getElementById("status_of_video").innerHTML = "File Says Paused...";
+                        futurama_Video.pause();
+                    }
+                 }
+               };
+               xhttp.open("GET", "ajax_info.txt", true);
+               xhttp.send();
+            }
+
+            var x = setInterval(function() {
+                //document.getElementById("status_of_video").innerHTML = "FUNCTION CALLED";
+                loadDoc();
+            }, 1000);
+        </script>
+
+    </body>
+</html>
