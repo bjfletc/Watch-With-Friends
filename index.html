@@ -14,9 +14,6 @@
             <video id="Futurama_Video"  controls>
                 <source src="videos/S02E01.mp4" type="video/mp4">
             </video>
-            <script>
-                // var vid = document.getElementById("test01");
-            </script>
         </div>
 
         <!-- Add Pause/Play Buttons -->
@@ -50,7 +47,8 @@
             }
 
             var x = setInterval(function() {
-                document.getElementById("status_of_video").innerHTML = "FUNCTION CALLED";
+                // check flag for setInterval && AJAX
+                // document.getElementById("status_of_video").innerHTML = "FUNCTION CALLED";
                 loadDoc();
             }, 1000);
         </script>
