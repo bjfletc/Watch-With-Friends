@@ -7,8 +7,9 @@
     </head>
 
     <body>
-
+        <!--
         <h1 id="status_of_video"> No Status... </h1>
+        -->
 
         <h1 id="videoTitle"> Futurama: S02E01 </h1>
         <div id="test00">
@@ -35,10 +36,10 @@
                  if (this.readyState == 4 && this.status == 200) {
                     var status = this.responseText;
                     if (status.indexOf("false") !== -1) {
-                        document.getElementById("status_of_video").innerHTML = "File Says Playing...";
+                        // document.getElementById("status_of_video").innerHTML = "File Says Playing...";
                         futurama_Video.play();
                     } else {
-                        document.getElementById("status_of_video").innerHTML = "File Says Paused...";
+                        // document.getElementById("status_of_video").innerHTML = "File Says Paused...";
                         futurama_Video.pause();
                     }
                  }
